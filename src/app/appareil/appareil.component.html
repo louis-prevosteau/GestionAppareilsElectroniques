@@ -1,0 +1,14 @@
+<li [ngClass]="{
+                'list-group-item': true,
+                'list-group-item-success': status === 'allumé',
+                'list-group-item-danger': status == 'éteint'}">
+    <h4>{{name}}</h4>
+    <h6>{{status}}</h6>
+    <input type="text" class="form-control" [(ngModel)]="name">
+    <button class="btn btn-success"
+            *ngIf="status === 'éteint'"
+            (click)="onSwitch()">Allumer</button>
+    <button class="btn btn-danger"
+            *ngIf="status === 'allumé'"
+            (click)="onSwitch()">Eteindre</button>
+</li>

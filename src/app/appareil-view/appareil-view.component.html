@@ -1,0 +1,10 @@
+<h2>Mes Appareils</h2>
+<ul class="list-group">
+    <app-appareil
+    *ngFor="let appareil of appareils; let i = index"
+    [name]="appareil.name"
+    [status]="appareil.status"
+    [index]="i"></app-appareil>
+</ul>
+<button class="btn btn-success" (click)="onAllumer()">Tout Allumer</button>
+<button class="btn btn-danger" (click)="onEteindre()">Tout Eteindre</button>
