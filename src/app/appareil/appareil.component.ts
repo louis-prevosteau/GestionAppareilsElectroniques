@@ -25,4 +25,8 @@ export class AppareilComponent implements OnInit {
     }
   }
 
+  onDelete(){
+    this.appareilService.delAppareil(this.index);
+  }
+
 }

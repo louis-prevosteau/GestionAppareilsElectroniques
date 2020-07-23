@@ -44,4 +44,9 @@ export class AppareilService{
         this.appareils.push(appareilObject);
         this.emitAppareilSubject();
     }
+
+    delAppareil(i: number){
+        this.appareils.splice(i);
+        this.emitAppareilSubject();
+    }
 }
